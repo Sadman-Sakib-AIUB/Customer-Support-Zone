@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1001",
+    "title": "Login Issue",
+    "description": "Customer unable to log into their account despite correct credentials.",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1002",
+    "title": "Payment Failure",
+    "description": "Payment gateway declined transaction though card is valid.",
+    "customer": "Jane Smith",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1003",
+    "title": "Bug in Mobile App",
+    "description": "App crashes when navigating to profile page.",
+    "customer": "Michael Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1004",
+    "title": "Feature Request",
+    "description": "Customer requested dark mode feature for better usability.",
+    "customer": "Emily Davis",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1005",
+    "title": "Password Reset Not Working",
+    "description": "Reset password link expired immediately after receiving.",
+    "customer": "Chris Brown",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1006",
+    "title": "Order Not Delivered",
+    "description": "Customer claims order not delivered even after marked as delivered.",
+    "customer": "Sophia Wilson",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1007",
+    "title": "Email Notifications Delayed",
+    "description": "Emails about new updates are received hours later.",
+    "customer": "David Martinez",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1008",
+    "title": "Refund Request",
+    "description": "Customer requesting refund due to wrong product shipment.",
+    "customer": "Olivia Anderson",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1009",
+    "title": "Broken Link on Website",
+    "description": "Checkout page link redirects to 404 error.",
+    "customer": "Liam Thomas",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "21-09-25"
+  },
+  {
+    "id": "1010",
+    "title": "Slow Performance",
+    "description": "Website takes too long to load product images.",
+    "customer": "Ava Taylor",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "21-09-25"
+  }
+]
