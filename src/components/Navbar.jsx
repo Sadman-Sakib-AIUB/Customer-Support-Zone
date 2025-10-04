@@ -30,30 +30,30 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <a>Home</a>
               </li>
               <li>
-                <a>Item 1</a>
+                <a>FAQ</a>
               </li>
               <li>
-                <a>Item 1</a>
+                <a>Chnagelog</a>
               </li>
               <li>
-                <a>Item 1</a>
+                <a>Blog</a>
               </li>
               <li>
-                <a>Item 1</a>
+                <a>Download</a>
               </li>
               <li>
-                <a>Item 1</a>
+                <a>Contact</a>
               </li>              
             </ul>
           </div>
-          <a className="text-2xl font-bold text-black ">CS — Ticket System</a>
+          <a className="text-lg md:text-2xl font-semibold text-black ">CS — Ticket System</a>
         </div>
         
         <div className="navbar-end">
-            <ul className=" flex gap-8 text-sm">
+            <ul className=" md:flex gap-8 text-sm hidden ">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Changelog</a></li>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <li><a href="#">Download</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-          <button className="btn ml-10 items-center bg-linear-[125deg] from-[#632EE3] from-5% to-[#9F62F2] to-85% text-white">+ New Ticket</button>
+          <button className=" btn ml-10 items-center bg-linear-[125deg] from-[#632EE3] from-5% to-[#9F62F2] to-85% text-white">+ New Ticket</button>
         </div>
         </Container>
       </div>

@@ -47,6 +47,8 @@ const TicketContainer = ({ ticketsPromise }) => {
 
     const remainingTickets = ticketItems.filter(item => item.id !== ticket.id);
     setTicketItems(remainingTickets);
+
+    toast("Ticket Resolved");
     
   }
 
