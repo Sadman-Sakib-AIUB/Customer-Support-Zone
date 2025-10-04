@@ -2,9 +2,9 @@ import React from "react";
 import iconOpen from "../../assets/Icons/open.svg";
 import iconProgress from "../../assets/Icons/progress.svg";
 
-const TicketsCard = ({ ticket }) => {
+const TicketsCard = ({ ticket,handleTicket }) => {
   return (
-    <div className="flex cursor-pointer flex-col justify-between space-y-2.5 rounded-md bg-white p-3 shadow-lg duration-300 hover:scale-105 ">
+    <div onClick={ () => handleTicket(ticket)} className="flex cursor-pointer flex-col justify-between space-y-2.5 rounded-md bg-white p-3 shadow-lg duration-300 hover:scale-105 ">
       <div className="flex justify-between">
         <h4 className=" text-lg font-medium">{ticket.title}</h4>
         <div
