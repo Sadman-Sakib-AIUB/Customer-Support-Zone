@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Navbar from "./components/Navbar"
 import TicketContainer from "./components/TicketContainer"
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const loadTickets = async () => {
     return await fetch("/tickets.json")
@@ -20,6 +21,7 @@ function App() {
       <TicketContainer ticketsPromise={ticketsPromise}></TicketContainer>
       </Suspense>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

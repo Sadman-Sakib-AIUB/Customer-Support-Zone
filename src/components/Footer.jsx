@@ -6,7 +6,7 @@ import Container from "./Container";
 
 export default function Footer() {
   return (
-    <footer className="bg-black pt-12">
+    <footer className="bg-black pt-12 mb-0">
       <Container>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-5 border-b border-b-slate-200/20 text-[#A1A1AA]">
           {/* 1st col */}

@@ -3,6 +3,8 @@ import States from "./States";
 import Container from "./Container";
 import TicketsCard from "./cards/ticketsCard";
 import ProgressCard from "./cards/ProgressCard";
+import ResolveCard from "./cards/ResolveCard";
+import { toast } from "react-toastify";
 
 const TicketContainer = ({ ticketsPromise }) => {
   const data = use(ticketsPromise);
@@ -11,21 +13,49 @@ const TicketContainer = ({ ticketsPromise }) => {
 
   const [progressItems, setProgressItems] = useState([]);
 
+  const [resolveItems, setResolveItems] = useState([]);
+
   // ---------------------handling click on "tickets" functionality--------------------
   const handleTicket = (ticket) => {
     // return console.log(ticket);
 
+    const isExist = progressItems.find(item => item.id == ticket.id);
+    if(isExist){
+      toast.error("Already in Progress");
+      return;
+    }
+
+    //---------------- Pushing tickets in Progress list ---------------- 
     const newProgressItems = [...progressItems, ticket];
     setProgressItems(newProgressItems);
+    ticket.status = "Pending ";
+
+    toast.success("Ticket added to the queue");
 
   };
+
+  //---------------------- handling Complete Button functionality ------------------------- 
+  const handleProgress = (ticket) => {
+    const newResolveItems = [...resolveItems,ticket];
+    setResolveItems(newResolveItems);
+
+    //-------------------------- Removing from Progress List ---------------------------- 
+    const remainingProgTickets = progressItems.filter(item => item.id !== ticket.id);
+    setProgressItems(remainingProgTickets); 
+
+    //-------------------------- Removing from Total ticket List ------------------------- 
+
+    const remainingTickets = ticketItems.filter(item => item.id !== ticket.id);
+    setTicketItems(remainingTickets);
+    
+  }
 
 
 
   return (
     <div>
       <Container>
-        <States progressItemsCount = {progressItems.length}></States>
+        <States progressItemsCount = {progressItems.length} resolveItemsCount = {resolveItems.length}></States>
 
         <section className=" grid grid-cols-1 md:grid-cols-12 gap-5 mt-12">
           <div className=" col-span-9">
@@ -47,16 +77,27 @@ const TicketContainer = ({ ticketsPromise }) => {
             <div>
               <section className="mb-8 space-y-2">
                 {progressItems.length == 0 ? (
-                  <p className=" text-slate-500">Select A ticket to add to Task Status</p>
+                  <p className="mt-5 text-slate-500">Select A ticket to add to Task Status</p>
                 ) : (
                   progressItems.map((ticket) => (
-                    <ProgressCard key={ticket.id} ticket={ticket}></ProgressCard>
+                    <ProgressCard handleProgress={handleProgress} key={ticket.id} ticket={ticket}></ProgressCard>
                   ))
                 )}
               </section>
             </div>
 
             <p className="text-2xl font-bold">Resolve Task</p>
+            <div>
+              <section className="mb-8 space-y-2">
+                {resolveItems.length == 0 ? (
+                  <p className="mt-5 text-slate-500">No resolve task yet</p>
+                ) : (
+                  resolveItems.map((ticket) => (
+                    <ResolveCard key={ticket.id} ticket={ticket}></ResolveCard>
+                  ))
+                )}
+              </section>
+            </div>
           </div>
         </section>
       </Container>

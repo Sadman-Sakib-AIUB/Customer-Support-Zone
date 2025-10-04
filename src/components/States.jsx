@@ -1,6 +1,6 @@
 import React from "react";
 
-const States = ({progressItemsCount}) => {
+const States = ({progressItemsCount,resolveItemsCount}) => {
   return (
     <section className=" grid grid-cols-1 md:grid-cols-2 gap-8">
 
@@ -16,7 +16,7 @@ const States = ({progressItemsCount}) => {
       <div className="rounded-lg bg-linear-[90deg] from-[#54CF68] from-5% to-[#00827A] to-85% text-center text-white">
         <div className=" bg-contain bg-position-[left,right] bg-no-repeat p-10 bg-[url(./assets/vector1.png),url(./assets/vector2.png)]">
           <h2 className="text-2xl">Resolve</h2>
-          <p className="text-6xl">{0}</p>
+          <p className="text-6xl">{resolveItemsCount}</p>
         </div>
       </div>
     </section>
