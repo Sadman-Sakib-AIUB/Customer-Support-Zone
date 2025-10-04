@@ -13,9 +13,9 @@
     "title": "Payment Failure",
     "description": "Payment gateway declined transaction though card is valid.",
     "customer": "Jane Smith",
-    "priority": "Critical",
+    "priority": "High",
     "status": "In Progress",
-    "createdAt": "21-09-25"
+    "createdAt": "22-09-25"
   },
   {
     "id": "1003",
@@ -24,7 +24,7 @@
     "customer": "Michael Johnson",
     "priority": "High",
     "status": "Open",
-    "createdAt": "21-09-25"
+    "createdAt": "22-09-25"
   },
   {
     "id": "1004",
@@ -32,8 +32,8 @@
     "description": "Customer requested dark mode feature for better usability.",
     "customer": "Emily Davis",
     "priority": "Low",
-    "status": "Closed",
-    "createdAt": "21-09-25"
+    "status": "Open",
+    "createdAt": "23-09-25"
   },
   {
     "id": "1005",
@@ -42,16 +42,16 @@
     "customer": "Chris Brown",
     "priority": "Medium",
     "status": "In Progress",
-    "createdAt": "21-09-25"
+    "createdAt": "25-09-25"
   },
   {
     "id": "1006",
     "title": "Order Not Delivered",
     "description": "Customer claims order not delivered even after marked as delivered.",
     "customer": "Sophia Wilson",
-    "priority": "Critical",
+    "priority": "High",
     "status": "Open",
-    "createdAt": "21-09-25"
+    "createdAt": "25-09-25"
   },
   {
     "id": "1007",
@@ -60,7 +60,7 @@
     "customer": "David Martinez",
     "priority": "Medium",
     "status": "Open",
-    "createdAt": "21-09-25"
+    "createdAt": "28-09-25"
   },
   {
     "id": "1008",
@@ -68,8 +68,8 @@
     "description": "Customer requesting refund due to wrong product shipment.",
     "customer": "Olivia Anderson",
     "priority": "High",
-    "status": "Resolved",
-    "createdAt": "21-09-25"
+    "status": "In Progress",
+    "createdAt": "24-09-25"
   },
   {
     "id": "1009",
@@ -77,8 +77,8 @@
     "description": "Checkout page link redirects to 404 error.",
     "customer": "Liam Thomas",
     "priority": "Low",
-    "status": "Closed",
-    "createdAt": "21-09-25"
+    "status": "Open",
+    "createdAt": "30-09-25"
   },
   {
     "id": "1010",
@@ -87,6 +87,6 @@
     "customer": "Ava Taylor",
     "priority": "High",
     "status": "In Progress",
-    "createdAt": "21-09-25"
+    "createdAt": "22-09-25"
   }
 ]

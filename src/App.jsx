@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import Navbar from "./components/Navbar"
 import TicketContainer from "./components/TicketContainer"
+import Footer from "./components/Footer";
 
 const loadTickets = async () => {
     return await fetch("/tickets.json")
@@ -11,11 +13,13 @@ function App() {
   const ticketsPromise = loadTickets();
 
   return (
-    <div className="bg-[#F5F5F5] text-[#627382] space-y-12">
+    <div className="bg-[#F5F5F5] space-y-12">
       
       <Navbar></Navbar>
+      <Suspense fallback="Data Loading...⌛">
       <TicketContainer ticketsPromise={ticketsPromise}></TicketContainer>
-     
+      </Suspense>
+      <Footer></Footer>
     </div>
   )
 }

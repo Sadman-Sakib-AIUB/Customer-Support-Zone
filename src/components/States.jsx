@@ -11,7 +11,7 @@ const States = () => {
           <p className="text-6xl">{0}</p>
         </div>
       </div>
-      
+
         {/* Card - 2 */}
       <div className="rounded-lg bg-linear-[90deg] from-[#54CF68] from-5% to-[#00827A] to-85% text-center text-white">
         <div className=" bg-contain bg-position-[left,right] bg-no-repeat p-10 bg-[url(./assets/vector1.png),url(./assets/vector2.png)]">
